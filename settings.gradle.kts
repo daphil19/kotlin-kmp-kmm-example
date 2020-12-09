@@ -12,12 +12,20 @@ pluginManagement {
             }
         }
     }
+    val pluginVersion = "1.4.21"
+    plugins {
+        kotlin("multiplatform") version pluginVersion apply false
+        kotlin("jvm") version pluginVersion apply false
+        kotlin("js") version pluginVersion apply false
+    }
 }
 
-rootProject.name = "kotlin-kmp-kmm"
+rootProject.name = "kotlin-kmp-kmm-example"
 
 include(":common")
-include(":server")
+include(":web")
+include(":web:server")
+include(":web:client")
 include(":mobile")
 include(":mobile:shared")
 include(":mobile:androidApp")

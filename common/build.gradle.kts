@@ -1,15 +1,19 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("multiplatform") version "1.4.21"
+    kotlin("multiplatform")
 }
 
 kotlin {
     jvm()
-    // NOTE this is the deployed js target since kmm can't support multiple js targets
     js {
         browser {
-            binaries.executable()
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                    webpackConfig.cssSupport.enabled = true
+                }
+            }
         }
     }
     ios()

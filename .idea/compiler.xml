@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="11" />
+    <bytecodeTargetLevel target="11">
+      <module name="kotlin-kmp-kmm.common.commonMain" target="8" />
+      <module name="kotlin-kmp-kmm.common.commonTest" target="8" />
+      <module name="kotlin-kmp-kmm.common.jvmMain" target="8" />
+      <module name="kotlin-kmp-kmm.common.jvmTest" target="8" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidAndroidTest" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidAndroidTestDebug" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidDebug" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidDebugAndroidTest" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidDebugUnitTest" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidMain" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidRelease" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidReleaseUnitTest" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidTest" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidTestDebug" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.androidTestRelease" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.commonMain" target="1.6" />
+      <module name="kotlin-kmp-kmm.mobile.shared.commonTest" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
