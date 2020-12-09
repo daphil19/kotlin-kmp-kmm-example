@@ -3,7 +3,8 @@ import org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget
 plugins {
     kotlin("multiplatform")
     id("com.android.library")
-    id("kotlin-android-extensions")
+    kotlin("plugin.parcelize")
+
 }
 group = "com.example.myapplication"
 version = "1.0-SNAPSHOT"
@@ -40,7 +41,7 @@ kotlin {
         val androidTest by getting {
             dependencies {
                 implementation(kotlin("test-junit"))
-                implementation("junit:junit:4.12")
+                implementation("junit:junit:4.13.1")
             }
         }
         val iosMain by getting {

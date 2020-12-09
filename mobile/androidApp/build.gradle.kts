@@ -1,7 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
-    id("kotlin-android-extensions")
+    kotlin("plugin.parcelize")
 }
 group = "com.example.myapplication"
 version = "1.0-SNAPSHOT"
