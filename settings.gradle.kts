@@ -23,9 +23,8 @@ pluginManagement {
 rootProject.name = "kotlin-kmp-kmm-example"
 
 include(":common")
-include(":web")
-include(":web:server")
-include(":web:client")
+include(":server")
+include(":client")
 include(":mobile")
 include(":mobile:shared")
 include(":mobile:androidApp")
