@@ -80,3 +80,14 @@ val packForXcode by tasks.creating(Sync::class) {
     into(targetDir)
 }
 tasks.getByName("build").dependsOn(packForXcode)
+
+val compiler = javaToolchains.compilerFor {
+    languageVersion.set(JavaLanguageVersion.of(8))
+}
+
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
+    kotlinOptions {
+        jvmTarget = "1.8"
+        jdkHome = compiler.get().metadata.installationPath.asFile.absolutePath
+    }
+}

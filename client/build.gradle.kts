@@ -47,8 +47,13 @@ kotlin {
     }
 }
 
+val compiler = javaToolchains.compilerFor {
+    languageVersion.set(JavaLanguageVersion.of(8))
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions {
-        jvmTarget = "8" // can't go past java 8 so that we can use it in android
+        jvmTarget = "1.8" // can't go past java 8 so that we can use it in android
+        jdkHome = compiler.get().metadata.installationPath.asFile.absolutePath
     }
 }
