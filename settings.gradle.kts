@@ -12,7 +12,7 @@ pluginManagement {
             }
         }
     }
-    val pluginVersion = "1.4.21"
+    val pluginVersion = "1.4.31"
     plugins {
         kotlin("multiplatform") version pluginVersion apply false
         kotlin("jvm") version pluginVersion apply false
