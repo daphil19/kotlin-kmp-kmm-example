@@ -6,13 +6,6 @@ plugins {
 group = "com.example.myapplication"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    gradlePluginPortal()
-    google()
-    jcenter()
-    mavenCentral()
-}
-
 dependencies {
     implementation(project(":mobile:shared"))
     implementation("com.google.android.material:material:1.2.1")
