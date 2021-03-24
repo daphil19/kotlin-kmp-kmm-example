@@ -12,11 +12,25 @@ pluginManagement {
             }
         }
     }
-    val pluginVersion = "1.4.31"
+    val kotlinVersion: String by settings
     plugins {
-        kotlin("multiplatform") version pluginVersion apply false
-        kotlin("jvm") version pluginVersion apply false
-        kotlin("js") version pluginVersion apply false
+        kotlin("multiplatform") version kotlinVersion apply false
+        kotlin("jvm") version kotlinVersion apply false
+        kotlin("js") version kotlinVersion apply false
+    }
+}
+
+// The mobile modules require this, but putting it at the "mobile root" level brings up a warning about loading the
+// plugin multiple times
+buildscript {
+    repositories {
+        gradlePluginPortal()
+        google()
+    }
+    val kotlinVersion: String by settings
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+        classpath("com.android.tools.build:gradle:4.1.1")
     }
 }
 
