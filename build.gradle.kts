@@ -34,4 +34,3 @@ tasks.named("dependencyUpdates", DependencyUpdatesTask::class.java).configure {
     // don't look at gradle rc versions either
     gradleReleaseChannel = "current"
 }
-
